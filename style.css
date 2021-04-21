@@ -6,7 +6,7 @@
   --trans_white: hsla(0, 0%, 100%, 0.75);
   --slightly_trans_white: hsla(0, 0%, 100%, 0.6);
 
-  --font_size: 15px;
+  --font_size: 1em;
 }
 
 * {
@@ -26,23 +26,57 @@ html, body {
 }
 
 .container {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--dark_blue);
+  border-radius: 20px;
+}
+
+.main_content {
   display: grid; 
   grid-template-columns: repeat(3, 1fr);
-  grid-row-gap: 3em;
-  grid-template-areas: "hd hd hd" "p p p" "info1 info2 info3";
+  grid-gap: 2em;
+  grid-template-areas: "hd hd hd" "p p p" "info3 info2 info1";
   justify-content: space-around;
+
+  font-family: 'Inter', sans-serif;
+  font-size:  var(--font_size);
+  font-weight: 400;
+  
 }
 
 .container h1 {
   grid-area: hd;
+  color: var(--white);
+  font-weight: 700;
+}
+
+.container h1 span {
+  color: var(--soft_violet);
 }
 
 .container p {
   grid-area: p;
+  color: var(--trans_white);
+  font-weight: 400;
 }
 
 .container div {
-  text-align: center;
+  color: var(--white);
+  text-align: left;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.container .numbers {
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.5em;
+}
+
+.container .names {
+  color: var(--slightly_trans_white);
+  font-weight: 400;
 }
 
 .container div:nth-child(1) {
@@ -60,6 +94,13 @@ html, body {
 .attribution { 
   font-size: 11px; 
   text-align: center; 
+}
+
+img {
+  grid-area: img;
+  border-radius: inherit;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .attribution a {
