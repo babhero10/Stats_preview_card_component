@@ -1,0 +1,67 @@
+:root {
+  --dark_blue: hsl(233, 47%, 7%);
+  --desaturated_blue: hsl(244, 38%, 16%);
+  --soft_violet: hsl(277, 64%, 61%);
+  --white: hsl(0, 0%, 100%);
+  --trans_white: hsla(0, 0%, 100%, 0.75);
+  --slightly_trans_white: hsla(0, 0%, 100%, 0.6);
+
+  --font_size: 15px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 95%;
+}
+
+.center {
+  display: flex; 
+  height: inherit;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 3em;
+  grid-template-areas: "hd hd hd" "p p p" "info1 info2 info3";
+  justify-content: space-around;
+}
+
+.container h1 {
+  grid-area: hd;
+}
+
+.container p {
+  grid-area: p;
+}
+
+.container div {
+  text-align: center;
+}
+
+.container div:nth-child(1) {
+  grid-area: info1;
+}
+
+.container div:nth-child(2) {
+  grid-area: info2;
+}
+
+.container div:nth-child(3) {
+  grid-area: info3;
+}
+
+.attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%); 
+}
