@@ -35,7 +35,6 @@ html, body {
 
 .main_content {
   display: grid; 
-  grid-template-columns: repeat(2, 1fr);
   
   grid-template-areas: "hd hd hd"  "info2 info3 info1";
 
@@ -62,7 +61,7 @@ h1 p {
   font-weight: 400;
   font-size: var(--font_size);
   line-height: 1.5;
-  word-wrap: break-word;
+  /* word-wrap: break-word; */
   padding: .5em 0;
 }
 
@@ -117,4 +116,32 @@ h1 p {
 
 .attribution a {
   color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 870px) {
+  
+  .container {
+    flex-direction: column-reverse;
+    margin-top: 20%;
+    
+  }
+
+  .main_content {
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "hd" "info1" "info2" "info3";
+    grid-gap: 0.5em;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container div {
+    color: var(--white);
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .img {
+    background-image: url("images/image-header-mobile.jpg");
+    height: 440px;
+  }
 }
