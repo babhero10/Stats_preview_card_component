@@ -14,7 +14,7 @@
 }
 
 html, body {
-  height: 95%;
+  height: 100%;
   background-color: var(--dark_blue);
 }
 
@@ -29,25 +29,22 @@ html, body {
 .container {
   display: flex;
   width: 80%;
-  justify-content: space-between;
-  background-color: var(--desaturated_blue);
-  
-  border-radius: 20px;
+  background-color: hsl(277deg 100% 35%);;
+  border-radius: 5px;
 }
 
 .main_content {
   display: grid; 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   
   grid-template-areas: "hd hd hd"  "info2 info3 info1";
-  justify-content: space-between;
 
-  padding: 2.5em;
+  padding: 3.5em;
+  background-color: var(--desaturated_blue);
 
   font-family: 'Inter', sans-serif;
   font-size:  var(--font_size);
   font-weight: 400;
-  
 }
 
 .container h1 {
@@ -100,11 +97,16 @@ h1 p {
   grid-area: info3;
 }
 
-img {
-  grid-area: img;
+.img {
+  width: 100%;
+  height: 100%;
   border-radius: inherit;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
+  background-image: url("images/image-header-desktop.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: opacity(0.7);
 }
 
 .attribution { 
